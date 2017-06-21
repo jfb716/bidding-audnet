@@ -1,10 +1,15 @@
 # Prebid.js &amp; Audience Network Debug Tool
 
+## Implementation Steps:
+
+* Copy all lines of code from [here](prebid-audNet-debugTool/prebid_audNet_debugTool.js)
 * Open Chrome Dev Tools
 * Click on the “Sources” Tab
 * Click on “Snippets” (could be under more options button)
 * Click on “+ New Snippet”
+
 ![alt text](/resources/images/snippet_setup.png)
+
 * Name the Snippet (ie “Prebid.js & Audience Network Debug Tool”)
 * Paste the Code into the Box on the Right of your New Snippet
 * Right Click on the Code You Just Pasted and Click “Save”
@@ -17,4 +22,5 @@
     * **All Bidders / All Sizes** - this is an aggregation of all the bids on the page
     * **Winning Bidders for All Sizes** - this is all the winners for each ad slot on the page
     * **Full Details for All Bidders** - this is the entire prebid.js bid response object printed out so you can dig into it if necessary (you can see our tag and the exact key values being sent to DFP)
+    
 ![alt text](/resources/images/example_output.png)
