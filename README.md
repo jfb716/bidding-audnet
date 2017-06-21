@@ -13,7 +13,7 @@
 * Name the Snippet (ie “Prebid.js & Audience Network Debug Tool”)
 * Paste the code into the box on the right of your New Snippet
 * Right click on the code you just pasted and click “Save”
-* Visit any webpage With Prebid.js & Audience Network, after the page completes the auction, open up chrome dev tools and navigate to Sources → Snippets and right click your new snippets Name and click “Run”
+* Visit any webpage With Prebid.js & Audience Network, after the page completes the auction, open up chrome dev tools and navigate to Sources :fast_forward: Snippets and right click your new snippets Name and click “Run”
 
 > Section Breakdown
 
