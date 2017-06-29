@@ -2,7 +2,7 @@
 
 > Implementation Steps :computer:
 
-* Copy all lines of code from js file [here](prebid-audNet-debugTool/prebid_audNet_debugTool.js)
+* Copy all lines of code from js file [here](https://github.com/jfb716/prebid-audNet-debugTool/blob/master/prebid_audNet_debugTool.js)
 * Open Chrome Dev Tools
 * Click on the “Sources” Tab
 * Click on “Snippets” (could be under more options button)
