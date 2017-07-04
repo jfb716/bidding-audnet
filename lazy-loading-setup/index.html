@@ -7,6 +7,9 @@
         <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
 
         <script>
+            
+          <!-- Set your slots to variables and disable initial load -->
+            
           var slot1, slot2; + googletag.cmd.push(function() {
             slot1 = googletag.defineSlot('/27721068/header_bidding', [300, 250], 'div-gpt-ad-1').addService(googletag.pubads());
             slot2 = googletag.defineSlot('/27721068/header_bidding', [300, 250], 'div-gpt-ad-2').addService(googletag.pubads());
@@ -45,7 +48,12 @@
       
     </body>
     <script>
+      
+      <-- Variable representing if the slot was loaded yet -->
+       
       var refreshed = false;
+        
+      <-- Function that triggers when the user is 600px above the ad slot and loads the ad -->
 
       var listener = function() {
         if (window.scrollY >= divH2 && !refreshed) {
@@ -56,7 +64,12 @@
         } 
       };
      
+      <!-- Add an event listener for scroll on the listener function -->
+          
       window.addEventListener('scroll', listener);
+        
+      <!-- Set up variables to calculate the distance of the slot from the top of the page --> 
+        
       var div2 = document.querySelector(".adSlot2");
       var divH = div2.offsetTop;
       var divH2 = divH - 600;
