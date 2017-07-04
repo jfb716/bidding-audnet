@@ -1,1 +1,1 @@
-![alt text](full-code-samples/display.JPG)
+![alt text](display.JPG)
