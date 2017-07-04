@@ -21,7 +21,8 @@
   - 
 > Client Side Video
 
-
+<br>
+<br>
 
 # Best Practices
 > Client Side Display
