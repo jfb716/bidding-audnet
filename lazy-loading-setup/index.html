@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+
+        <script>
+          var slot1, slot2; + googletag.cmd.push(function() {
+            slot1 = googletag.defineSlot('/27721068/header_bidding', [300, 250], 'div-gpt-ad-1').addService(googletag.pubads());
+            slot2 = googletag.defineSlot('/27721068/header_bidding', [300, 250], 'div-gpt-ad-2').addService(googletag.pubads());
+            googletag.pubads().disableInitialLoad();
+            googletag.enableServices();
+            googletag.pubads().refresh([slot1]);
+          });
+        </script>
+
+    </head>
+    <body>
+
+    <!-- Content Here -->
+
+    <!-- Content Here -->
+
+      <div class="adSlot1" style='height:250px; width:300px;'>
+        <div id='div-gpt-ad-1' style='height:250px; width:300px;'>
+          <script>
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1'); });
+          </script>
+        </div>
+      </div>
+      
+      <!-- Content Here --> 
+
+      <!-- Content Here -->
+
+      <div class="adSlot2" style='height:250px; width:300px;'>
+        <div id='div-gpt-ad-2' style='height:250px; width:300px;'>
+          <script>
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-2'); });
+          </script>
+        </div>
+      </div>
+      
+    </body>
+    <script>
+      var refreshed = false;
+
+      var listener = function() {
+        if (window.scrollY >= divH2 && !refreshed) {
+          googletag.cmd.push(function() {
+            googletag.pubads().refresh([slot2]);
+          });
+          refreshed2 = true;
+        } 
+      };
+     
+      window.addEventListener('scroll', listener);
+      var div2 = document.querySelector(".adSlot2");
+      var divH = div2.offsetTop;
+      var divH2 = divH - 600;
+      
+    </script>
+</html>
