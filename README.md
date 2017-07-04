@@ -13,3 +13,4 @@
 
 # Best Practices
   - [Placement ID Setup](https://github.com/jfb716/bidding-audnet/tree/master/placement-setup)
+  - [Lazy Loading DFP Slots](https://github.com/jfb716/bidding-audnet/tree/master/lazy-loading-setup)
