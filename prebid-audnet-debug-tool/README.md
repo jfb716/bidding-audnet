@@ -2,13 +2,13 @@
 
 > Implementation Steps :computer:
 
-* Copy all lines of code from js file [here](https://github.com/jfb716/prebid-audNet-debugTool/blob/master/prebid_audNet_debugTool.js)
+* Copy all lines of code from js file [here](https://github.com/jfb716/bidding-audnet/blob/master/prebid-audnet-debug-tool/prebid_audNet_debugTool.js)
 * Open Chrome Dev Tools
 * Click on the “Sources” Tab
 * Click on “Snippets” (could be under more options button)
 * Click on “+ New Snippet”
 
-![alt text](/resources/images/snippet_setup.png)
+![alt text](/images/snippet_setup.png)
 
 * Name the Snippet (ie “Prebid.js & Audience Network Debug Tool”)
 * Paste the code into the box on the right of your New Snippet
@@ -27,4 +27,4 @@
 
 > Example Screenshot :mag:
 
-![alt text](/resources/images/example_output.png)
+![alt text](/images/example_output.png)
