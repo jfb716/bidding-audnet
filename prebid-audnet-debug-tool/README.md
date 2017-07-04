@@ -8,7 +8,7 @@
 * Click on “Snippets” (could be under more options button)
 * Click on “+ New Snippet”
 
-![alt text](/prebid-audnet-debug-tool/images/snippet_setup.png)
+![alt text](images/snippet_setup.png)
 
 * Name the Snippet (ie “Prebid.js & Audience Network Debug Tool”)
 * Paste the code into the box on the right of your New Snippet
