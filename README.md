@@ -10,6 +10,7 @@
   -
 
 
+
 # Full Code Samples
 > Client Side Display
   - [Lazy Loading with Prebid.js](https://github.com/jfb716/bidding-audnet/tree/master/full-code-samples/display-client-lazyloading-prebid)
@@ -18,6 +19,8 @@
   - 
   - 
 > Client Side Video
+
+
 
 # Best Practices
 > Client Side Display
