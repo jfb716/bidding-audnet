@@ -1,12 +1,15 @@
-console.log('%c<----- Prebid.js & Audience Network Debug START ----->', 'color: magenta; font-weight: bold;');
+console.clear();
+console.group('%c<----- Prebid.js & Audience Network Debug START ----->', 'color: magenta; font-weight: bold;');
 console.log(" ");
-console.log('%c<----- Wrapper Info ----->', 'color: cyan; font-weight: bold;');
+console.groupCollapsed('%c<----- Wrapper Info ----->', 'color: cyan; font-weight: bold;');
 console.log(" ");
 console.log("Domain: " + pbjs.publisherDomain);
 console.log("Version: " + pbjs.version);
 if (typeof(PREBID_TIMEOUT) === "number"){
   var pbjsTimeout = PREBID_TIMEOUT;
  console.log("Timeout: " + pbjsTimeout);
+} else {
+  var pbjsTimeout = 0;
 }
 console.log(" ");
 
@@ -18,10 +21,10 @@ for (var option in bidSet){
     console.log("DFP BIDDING KV #" + counter + ": " + key);
     counter++;
 }
-
+console.groupEnd();
 console.log(" ");
 console.log(" ");
-console.log('%c<----- All Audience Network Bids ----->', 'color: cyan; font-weight: bold;');
+console.groupCollapsed('%c<----- All Audience Network Bids ----->', 'color: cyan; font-weight: bold;');
 
 var responses = pbjs.getBidResponses();
 var output = [];
@@ -31,7 +34,9 @@ for (var adunit in responses) {
         for (var i = 0; i < bids.length; i++) {
                var b = bids[i];
                var timedOut = "No";
-               if (b.timeToRespond > pbjsTimeout) {
+               if (pbjsTimeout === 0) {
+                 timedOut = "Timeout Info N/A";
+               } else if (b.timeToRespond > pbjsTimeout) {
                  timedOut = "Yes";
                };
                if (b.bidder === 'audienceNetwork'){
@@ -55,10 +60,10 @@ if (output.length) {
 } else {
     console.warn('No Bids From Audience Network');
 }
-
+console.groupEnd();
 console.log(" ");
 console.log(" ");
-console.log('%c<----- Auctions By AdUnit ----->', 'color: cyan; font-weight: bold;');
+console.group('%c<----- Auctions By AdUnit ----->', 'color: cyan; font-weight: bold;');
 
 var responses = pbjs.getBidResponses();
 
@@ -66,14 +71,16 @@ for (var adunit in responses){
   var output = [];
   if (responses.hasOwnProperty(adunit)) {
     console.log(' ');
-    console.log('AdUnit: ' + adunit);
+    console.groupCollapsed('AdUnit: %c' + adunit, "color: black; font-weight: bold; background-color: cyan; padding: 2px; text-transform: uppercase;");
     var bids = responses[adunit].bids;
     for (var i = 0; i < bids.length; i++) {
       var b = bids[i];
-      output.push({
-      'adunit': adunit, 'sizes': b.size, 'adId': b.adId, 'bidder': b.bidder,
-      'time': b.timeToRespond, 'cpm': b.pbHg, 'msg': b.statusMessage
-      });
+      if (b.statusMessage === "Bid available") {
+        output.push({
+        'adunit': adunit, 'sizes': b.size, 'adId': b.adId, 'bidder': b.bidder,
+        'time': b.timeToRespond, 'cpm': b.pbHg, 'msg': b.statusMessage
+        });
+      };
     };
     if (output.length) {
         if (console.table) {
@@ -86,13 +93,14 @@ for (var adunit in responses){
     } else {
         console.warn('No Bids For AdUnit: ' + adunit);
     }
+    console.groupEnd();
   };
 };
 
-
+console.groupEnd();
 console.log(" ");
 console.log(" ");
-console.log('%c<----- All Audience Network Bids With Undefined Sizes ----->', 'color: cyan; font-weight: bold;');
+console.groupCollapsed('%c<----- All Audience Network Bids With Undefined Sizes ----->', 'color: cyan; font-weight: bold;');
 
 var responses = pbjs.getBidResponses();
 var output = [];
@@ -123,10 +131,10 @@ if (output.length) {
     console.warn('No Audience Network Bids With Undefined Size');
 }
 
-
+console.groupEnd();
 console.log(" ");
 console.log(" ");
-console.log('%c<----- Winning Bidders ----->', 'color: cyan; font-weight: bold;');
+console.groupCollapsed('%c<----- Winning Bidders ----->', 'color: cyan; font-weight: bold;');
 
 var bids = pbjs._winningBids;
 var output = [];
@@ -148,7 +156,8 @@ if (output.length) {
 } else {
     console.warn('No prebid winners, all slots went to Direct Sold');
 }
-
+console.groupEnd();
 console.log(" ");
 console.log(" ");
 console.log('%c<----- Prebid.js & Audience Network Debug END ----->', 'color: magenta; font-weight: bold;');
+console.groupEnd();
