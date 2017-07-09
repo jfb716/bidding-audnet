@@ -15,6 +15,12 @@
 * Right click on the code you just pasted and click “Save”
 * Visit any webpage With Prebid.js & Audience Network, after the page completes the auction, open up chrome dev tools and navigate to Sources :fast_forward: Snippets and right click your new snippets Name and click “Run”
 
-> Example Screenshot :mag:
+> Example Screenshots :mag:
 
-![alt text](images/example_output.png)
+Collapsed:
+
+![alt text](images/example_1.png)
+
+Semi-Expanded:
+
+![alt text](images/example_1.png)
