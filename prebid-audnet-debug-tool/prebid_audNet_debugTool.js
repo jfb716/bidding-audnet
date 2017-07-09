@@ -68,10 +68,23 @@ console.group('%c<----- Auctions By AdUnit ----->', 'color: cyan; font-weight: b
 var responses = pbjs.getBidResponses();
 
 for (var adunit in responses){
+  var bids = pbjs._winningBids;
   var output = [];
+  var slotWinner = "Direct Sold";
+  var winColor = "red";
+
   if (responses.hasOwnProperty(adunit)) {
     console.log(' ');
-    console.groupCollapsed('AdUnit: %c' + adunit, "color: black; font-weight: bold; background-color: cyan; padding: 2px; text-transform: uppercase;");
+    for (var i = 0; i < bids.length; i++) {
+        var b = bids[i];
+        if (b.adUnitCode === adunit) {
+          slotWinner = b.bidder;
+        }
+        if (slotWinner === "audienceNetwork") {
+          winColor = "green";
+        }
+    };
+    console.groupCollapsed("AdUnit: %c" + adunit + "%c    Winner: %c" + slotWinner, "color: black; font-weight: bold; background-color: cyan; padding: 2px; text-transform: uppercase;", " " , "color: black; font-weight: bold; background-color: " + winColor + "; padding: 2px; text-transform: uppercase;");
     var bids = responses[adunit].bids;
     for (var i = 0; i < bids.length; i++) {
       var b = bids[i];
