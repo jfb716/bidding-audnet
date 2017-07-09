@@ -13,7 +13,12 @@ if (typeof(PREBID_TIMEOUT) === "number"){
 }
 console.log(" ");
 
-var bidSet = pbjs.bidderSettings.standard.adserverTargeting;
+if (pbjs.bidderSettings.standard.adserverTargeting) {
+
+  var bidSet = pbjs.bidderSettings.standard.adserverTargeting;
+
+}
+
 var counter = 1;
 
 for (var option in bidSet){
