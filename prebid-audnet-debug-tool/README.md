@@ -17,10 +17,10 @@
 
 > Example Screenshots :mag:
 
-## Collapsed:
+### Collapsed:
 
 ![alt text](images/example_1.JPG)
 
-## Semi-Expanded:
+### Semi-Expanded:
 
 ![alt text](images/example_2.JPG)
