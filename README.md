@@ -1,6 +1,5 @@
 # Tools
   - [Prebid.js & Audience Network Console Debug - Client Side Display](https://github.com/jfb716/bidding-audnet/tree/master/prebid-audnet-debug-tool)
-<img src="/prebid-audnet-debug-tool/images/example_1.JPG" alt="tool_example" style="width: 200px;"/>
 
 <br>
 <br>
