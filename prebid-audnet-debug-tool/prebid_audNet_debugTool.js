@@ -13,7 +13,7 @@ if (typeof(PREBID_TIMEOUT) === "number"){
 }
 console.log(" ");
 
-if (pbjs.bidderSettings.standard.adserverTargeting) {
+if (pbjs.bidderSettings.standard) {
 
   var bidSet = pbjs.bidderSettings.standard.adserverTargeting;
 
