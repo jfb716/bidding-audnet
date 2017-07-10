@@ -1,7 +1,7 @@
 console.clear();
 console.group('%c<----- Prebid.js & Audience Network Debug START ----->', 'color: magenta; font-weight: bold;');
 
-if (pbjs.adUnits.length > 0) {
+if (pbjs._bidsRequested.length > 0) {
 
   console.log(" ");
   console.groupCollapsed('%c<----- Wrapper Info ----->', 'color: cyan; font-weight: bold;');
