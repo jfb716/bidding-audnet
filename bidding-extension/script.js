@@ -1,5 +1,5 @@
 var output = output || [];
-
+var myBidIds = myBidIds || [];
 function fireTool(){
   console.clear();
   console.log('%c<-- START -->', 'color: white; font-weight: bold;');
@@ -15,13 +15,14 @@ function fireTool(){
           var bids = responses[adunit].bids;
           for (var i = 0; i < bids.length; i++) {
                  var b = bids[i];
-                 if (b.bidder === 'audienceNetwork'){
-                   anBidsCount += 1;
-                  output.push({
-                  'bidder': b.bidder, 'adunit': adunit, 'sizes': b.size, 'format': b.fb_format, 'placementId': b.fb_placementid, 'adId': b.adId, 'bidId': b.fb_bidid, 'bid': b.pbHg, 'status': b.statusMessage
-              });
+                  if (b.bidder === 'audienceNetwork' && myBidIds.indexOf(b.adId) === -1){
+                    anBidsCount += 1;
+                    output.push({
+                    'bidder': b.bidder, 'adunit': adunit, 'sizes': b.size, 'format': b.fb_format, 'placementId': b.fb_placementid, 'adId': b.adId, 'bidId': b.fb_bidid, 'bid': b.pbHg, 'status': b.statusMessage
+                    });
 
-              }
+                    myBidIds.push(b.adId);
+                  }
           }
       }
   }
